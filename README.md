@@ -1,6 +1,9 @@
 # Programming Caesar's Cipher
-The purpose of this program is to encrypt or decrypt a secret message using the Caesar cipher.
+This program is to encrypt or decrypt a secret message using the Caesar cipher.
 Created on August 24, 2022
+
+# Purpose
+* The purpose of this program is to encrypt or decrypt a user's secret message using the Caesar cipher. The user provides a message, a key (which is a number from 0 to 25), and specifies whether they want to encrypt or decrypt the message. The program then applies the Caesar cipher algorithm to the message and returns the resulting message to the user. 
 
 ### Project Requirements
 
