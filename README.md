@@ -1,36 +1,21 @@
-# Programming Caesar's Cipher Starter Code
-This is a place for you to start building your Programming Caesar's Cipher Project!
+# Programming Caesar's Cipher
+The purpose of this program is to encrypt or decrypt a secret message using the Caesar cipher.
 
 ### Project Requirements
-Your project should:
-- Share an opening message with the user that describes what the program will do.
-- Include user input for the initialMessage (only capital letters), the key, and the mode (encrypt or decrypt).
-- Include a for loop that cycles through each character in the initialMessage.
-- Include a conditional statement that allows for multiple word messages.
-- Use a conditional statement to encrypt or decrypt the initialMessage based on user input.
-- Use a conditional statement to adjust the position of any wraparound characters.
-- Share the shiftedMessage with the user.
 
+* Python Programming: I gained experience using the Python programming language to create a functional Caesar Cipher encryption and decryption program. This included learning about Python syntax, data types, conditional statements, loops, and functions.
 
-### Extensions
-You can extend your project further by:
-- Add another usability feature.
-- Add a while loop to repeat the program.
-- Explore other ciphers. 
+* Cryptography Concepts: Through this project, I gained a deeper understanding of cryptography concepts such as substitution ciphers and encryption/decryption algorithms.
 
-###  Attributions
-*If you used any code, ideas, or resources from another person or group of people, tell us about it here. Make sure it is in the public domain, has a license that allows you to use it, or is one of your own.
-- This code is inspired by Cracking Codes with Python: An Introduction to Building and Breaking Ciphers by Al Sweigart https://www.nostarch.com/crackingcodes (BSD Licensed)
-- Add here if applicable
+* String manipulation: the project requires manipulating strings by finding the index of a character, slicing strings, concatenating strings, and converting between uppercase and lowercase.
 
----
+* User input validation: the project requires validating user input to ensure that the message only contains allowed characters and that the key is within the valid range.
 
-## File Overview
+* Debugging and Troubleshooting: While working on this project, I honed my problem-solving skills and learned how to debug and troubleshoot errors in my code using various tools and techniques.
 
-### ← README.md
+* Collaboration and Version Control: I gained experience working collaboratively on a coding project, including using version control tools such as Git to manage changes and merge code contributions.
 
-README.md file give you more documentation and information about a program. They are super helpful for describing what a program should do, any issues you've encountered, changes you want to make, and more. 
+* Testing and Quality Assurance: To ensure that my code was working properly and efficiently, I conducted thorough testing and quality assurance checks, including running automated test scripts and manually testing edge cases.
 
-### ← main.py
-This is where you will write your main program.# ProgrammingCaesarCipher
-# ProgrammingCaesarCipher
+* Technical Documentation: I created clear and concise technical documentation for my project, including a README file that explained how to use the program, its purpose and features, and any installation or configuration requirements.
+
