@@ -1,40 +1,58 @@
-#This program is the starter code for the Programming Caesar's Cipher Project. 
+#This program is the starter code for the Cracking Caesar's Cipher Project. 
 # This code is inspired by Cracking Codes with Python: An Introduction to Building and Breaking Ciphers by Al Sweigart https://www.nostarch.com/crackingcodes (BSD Licensed)
 
+import string
+
 # Global variables
-possibleCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 initialPosition = 0
 shiftedPosition = 0
-shiftedMessage = ""
+
+lettersLower = string.ascii_lowercase
+lettersUpper = string.ascii_uppercase
+numbers = string.digits
+symbols = string.punctuation
+possibleCharacters = lettersLower + lettersUpper + numbers + symbols
+
+
+# Define the function called decrypt
+def decrypt():
+  global shiftedPosition
+  shiftedPosition = initialPosition - key
+
+# Define the function called wraparound
+def wraparound():
+  global shiftedPosition
+  if shiftedPosition < 0:
+    shiftedPosition = shiftedPosition + len(possibleCharacters)
 
 # Run code
+
 # Introduction
-print("Welcome! This program will encrypt or decrypt your secret message using the Caesar cipher. \n\nWhen creating your message, you may only choose from the following characters: " + possibleCharacters + "\n\nLet's get started!\n")
+print("Welcome! This program will crack the Caesar cipher and figure out any secret message that was encrypted with the Caesar cipher. \n\nType in your encrypted message and this program will print all of the key possibilities of your message below.")
 
 # Receive user input
-initialMessage = input("What is your message? ")
-key = int(input("What is the key? Choose a number from 0 to 25. "))
-mode = input("Do you want to encrypt or decrypt? ")
+initialMessage = input("\nWhat is your encrypted message? ")
+input("\nPress enter to generate all of the key possibilities for your encrypted message.\n")
 
-# Encrypt or decrypt the message
-for character in initialMessage:
-  if character in possibleCharacters: 
-    initialPosition = possibleCharacters.find(character)
+# Cycle through all possible keys
+for key in range(len(possibleCharacters)):
+  shiftedMessage = ""
   
-    if mode.lower() == "encrypt":
-      shiftedPosition = initialPosition + key
-    elif mode.lower() == "decrypt":
-      shiftedPosition = initialPosition - key
+  # Decrypt the message
+  for character in initialMessage:
+    if character in possibleCharacters:
+      initialPosition = possibleCharacters.find(character)
+      decrypt()
+      wraparound()
   
-    if shiftedPosition >= len(possibleCharacters):
-      shiftedPosition = shiftedPosition - len(possibleCharacters)
-    elif shiftedPosition < 0:
-      shiftedPosition = shiftedPosition + len(possibleCharacters)
-      
-    shiftedMessage = shiftedMessage + possibleCharacters [shiftedPosition]
+      shiftedMessage = shiftedMessage + possibleCharacters[shiftedPosition]
+  
+    else: 
+      shiftedMessage = shiftedMessage + character
+  
+  # Print the shifted message
+  print("Key #%s: %s" % (key, shiftedMessage))
+  
 
-  else:
-    shiftedMessage = shiftedMessage + character 
-  
-# Print the shifted message
-print("Your " + mode.lower() + "ed message is: " + shiftedMessage)
+# Closing message
+print("\nNow scroll through all of the key possibilities above and find the readable plaintext message.")
