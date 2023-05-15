@@ -5,7 +5,7 @@ This program ecrypts user input and displays all the key possibilities.
 * The purpose of this program is to encrypt or decrypt a user's secret message using the Caesar cipher. The user provides a message, a key (which is a number from 0 to 25), and specifies whether they want to encrypt or decrypt the message. The program then applies the Caesar cipher algorithm to the message and returns the resulting message to the user. 
 
 <div style="text-align:center;">
-  <img src="https://github.com/efloresz/ProgrammingCaesarCipher/assets/110843762/312b2121-d4c8-4fee-9ba8-e7b5213ac24d" width="850" alt="ProgramOutput1">
+  <img src="https://github.com/efloresz/ProgrammingCaesarCipher/assets/110843762/0f05270d-218e-46a3-b98b-3f757cd0c60a" width="850" alt="ProgramOutput1">
 </div>
 
 
